@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews</title>
+
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* BODY */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0d6efd, #003b8b);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* NAV */
+        nav {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0d6efd;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #003b8b;
+        }
+
+        /* MAIN */
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        /* SECTION, ARTICLE, ASIDE, FOOTER */
+        section,
+        article,
+        aside,
+        footer {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2,
+        article h2,
+        aside h2 {
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        section p,
+        article p,
+        aside p {
+            margin-bottom: 15px;
+        }
+
+        /* ARTICLES */
+        article {
+            margin-bottom: 20px;
+        }
+
+        /* ASIDE */
+        aside ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        aside li {
+            margin-bottom: 10px;
+        }
+
+        aside a {
+            color: #0d6efd;
+            text-decoration: none;
+        }
+
+        aside a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #003b8b;
+        }
+
+        /* HR */
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>TechNews</h1>
+        <p>Tu portal diario de innovación y tecnología.</p>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <a href="">Inicio</a>
+        <a href="">Noticias</a>
+        <a href="">Reseñas</a>
+        <a href="">Contacto</a>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div>
+
+            <section>
+                <h2>Noticias Destacadas</h2>
+
+                <p>
+                    La inteligencia artificial continúa revolucionando el desarrollo de aplicaciones web y móviles.
+                    Cada vez más empresas incorporan sistemas inteligentes para automatizar tareas y mejorar la
+                    experiencia de usuario.
+                </p>
+
+                <p>
+                    Nuevos avances en baterías prometen dispositivos móviles con una duración mucho mayor.
+                    Investigadores europeos han presentado prototipos capaces de reducir el tiempo de carga a pocos
+                    minutos.
+                </p>
+
+                <p>
+                    La computación cuántica avanza rápidamente y varias compañías tecnológicas ya trabajan en soluciones
+                    comerciales para los próximos años.
+                </p>
+            </section>
+
+            <br>
+
+            <article>
+                <h2>El futuro de la inteligencia artificial en el desarrollo web</h2>
+
+                <p>
+                    <strong>Fecha:</strong>
+                    <time datetime="2026-05-15">15 de mayo de 2026</time>
+                </p>
+
+                <p>
+                    <strong>Autor:</strong>
+                    María González
+                </p>
+
+                <p>
+                    La inteligencia artificial se ha convertido en una herramienta fundamental para desarrolladores web.
+                    Actualmente existen plataformas capaces de generar código, optimizar interfaces y detectar errores
+                    automáticamente.
+                </p>
+
+                <p>
+                    Muchas empresas utilizan asistentes inteligentes para acelerar el desarrollo de aplicaciones y
+                    reducir costes. Sin embargo, expertos señalan que el conocimiento técnico sigue siendo esencial para
+                    supervisar y validar el trabajo generado por estas herramientas.
+                </p>
+            </article>
+
+            <article>
+                <h2>Nuevos smartphones con baterías de carga ultrarrápida</h2>
+
+                <p>
+                    <strong>Fecha:</strong>
+                    <time datetime="2026-05-12">12 de mayo de 2026</time>
+                </p>
+
+                <p>
+                    <strong>Autor:</strong>
+                    Carlos Herrera
+                </p>
+
+                <p>
+                    Diversos fabricantes tecnológicos han anunciado dispositivos móviles con sistemas de carga capaces
+                    de completar el 80% de la batería en menos de diez minutos.
+                </p>
+
+                <p>
+                    Esta tecnología podría cambiar la forma en que los usuarios utilizan sus teléfonos diariamente,
+                    reduciendo la dependencia de cargadores portátiles y aumentando la autonomía general.
+                </p>
+            </article>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+
+            <h2>Noticias Relacionadas</h2>
+
+            <ul>
+                <li>Las gafas de realidad aumentada ganan popularidad en educación.</li>
+                <li>Nuevos procesadores mejoran el rendimiento energético.</li>
+                <li>La ciberseguridad será una de las profesiones más demandadas.</li>
+            </ul>
+
+            <h2>Publicidad</h2>
+
+            <p>Aprende programación web desde cero.</p>
+            <p>Descubre nuestros cursos de desarrollo frontend y backend.</p>
+
+            <h2>Enlaces Externos</h2>
+
+            <ul>
+                <li><a href="#">OpenAI</a></li>
+                <li><a href="#">Mozilla Developer Network</a></li>
+                <li><a href="#">W3Schools</a></li>
+            </ul>
+
+        </aside>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>&copy; 2026 TechNews</p>
+
+            <p>contacto@technews.com</p>
+
+            <br>
+
+            <h4>Redes Sociales</h4>
+
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">YouTube</a>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
