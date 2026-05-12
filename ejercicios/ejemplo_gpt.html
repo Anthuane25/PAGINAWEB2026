@@ -1,166 +1,224 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FUENTE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <title>TechNews</title>
 
     <style>
-        /* RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* BODY */
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f7fb;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f3f4ff, #ffeef5);
             color: #333;
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.7;
         }
 
         /* HEADER */
+
         header {
-            background: linear-gradient(135deg, #0d6efd, #003b8b);
+            background: linear-gradient(135deg, #6c63ff, #ff6584);
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
+            padding: 70px 20px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 4rem;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
         header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
+            font-size: 1.2rem;
+            opacity: 0.95;
         }
 
         /* NAV */
+
         nav {
-            background-color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            margin: 30px auto;
+            background: white;
+            padding: 18px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
         nav a {
             text-decoration: none;
-            color: #0d6efd;
-            margin: 0 15px;
-            font-weight: bold;
+            color: #555;
+            font-weight: 600;
             transition: 0.3s;
+            position: relative;
         }
 
         nav a:hover {
-            color: #003b8b;
+            color: #6c63ff;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            left: 0;
+            bottom: -6px;
+            background: #ff6584;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+
+        nav a:hover::after {
+            width: 100%;
         }
 
         /* MAIN */
+
         main {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
             display: grid;
             grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* CONTENIDO */
+
+        .content {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
         }
 
-        /* SECTION, ARTICLE, ASIDE, FOOTER */
         section,
         article,
         aside,
         footer {
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
         }
 
-        section h2,
-        article h2,
-        aside h2 {
-            color: #0d6efd;
-            margin-bottom: 15px;
+        section:hover,
+        article:hover,
+        aside:hover {
+            transform: translateY(-5px);
         }
 
-        section p,
-        article p,
-        aside p {
-            margin-bottom: 15px;
-        }
-
-        /* ARTICLES */
-        article {
+        h2 {
+            color: #6c63ff;
             margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        article strong {
+            color: #ff6584;
+        }
+
+        time {
+            color: #777;
         }
 
         /* ASIDE */
+
         aside ul {
             margin-left: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         aside li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: #555;
         }
 
         aside a {
-            color: #0d6efd;
             text-decoration: none;
+            color: #6c63ff;
+            font-weight: 500;
+            transition: 0.3s;
         }
 
         aside a:hover {
-            text-decoration: underline;
+            color: #ff6584;
         }
 
         /* FOOTER */
+
         footer {
-            grid-column: 1 / -1;
             text-align: center;
             margin-top: 20px;
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #6c63ff, #ff6584);
+            color: white;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        footer h4 {
+            margin: 15px 0;
         }
 
         footer a {
             text-decoration: none;
-            color: #0d6efd;
-            font-weight: bold;
+            color: white;
+            margin: 0 10px;
+            transition: 0.3s;
+            font-weight: 500;
         }
 
         footer a:hover {
-            color: #003b8b;
-        }
-
-        /* HR */
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #ddd;
-            margin: 20px 0;
+            color: #ffe082;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 768px) {
+
+        @media(max-width: 900px) {
+
             main {
                 grid-template-columns: 1fr;
             }
 
-            nav a {
-                display: block;
-                margin: 10px 0;
+            nav {
+                flex-wrap: wrap;
+                gap: 20px;
             }
 
             header h1 {
-                font-size: 2.2rem;
+                font-size: 2.8rem;
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -183,32 +241,34 @@
     <main>
 
         <!-- CONTENIDO PRINCIPAL -->
-        <div>
+        <div class="content">
 
             <section>
                 <h2>Noticias Destacadas</h2>
 
                 <p>
-                    La inteligencia artificial continúa revolucionando el desarrollo de aplicaciones web y móviles.
-                    Cada vez más empresas incorporan sistemas inteligentes para automatizar tareas y mejorar la
+                    La inteligencia artificial continúa revolucionando el desarrollo
+                    de aplicaciones web y móviles. Cada vez más empresas incorporan
+                    sistemas inteligentes para automatizar tareas y mejorar la
                     experiencia de usuario.
                 </p>
 
                 <p>
-                    Nuevos avances en baterías prometen dispositivos móviles con una duración mucho mayor.
-                    Investigadores europeos han presentado prototipos capaces de reducir el tiempo de carga a pocos
-                    minutos.
+                    Nuevos avances en baterías prometen dispositivos móviles con una
+                    duración mucho mayor. Investigadores europeos han presentado
+                    prototipos capaces de reducir el tiempo de carga a pocos minutos.
                 </p>
 
                 <p>
-                    La computación cuántica avanza rápidamente y varias compañías tecnológicas ya trabajan en soluciones
-                    comerciales para los próximos años.
+                    La computación cuántica avanza rápidamente y varias compañías
+                    tecnológicas ya trabajan en soluciones comerciales para los
+                    próximos años.
                 </p>
+
             </section>
 
-            <br>
-
             <article>
+
                 <h2>El futuro de la inteligencia artificial en el desarrollo web</h2>
 
                 <p>
@@ -222,19 +282,23 @@
                 </p>
 
                 <p>
-                    La inteligencia artificial se ha convertido en una herramienta fundamental para desarrolladores web.
-                    Actualmente existen plataformas capaces de generar código, optimizar interfaces y detectar errores
-                    automáticamente.
+                    La inteligencia artificial se ha convertido en una herramienta
+                    fundamental para desarrolladores web. Actualmente existen
+                    plataformas capaces de generar código, optimizar interfaces y
+                    detectar errores automáticamente.
                 </p>
 
                 <p>
-                    Muchas empresas utilizan asistentes inteligentes para acelerar el desarrollo de aplicaciones y
-                    reducir costes. Sin embargo, expertos señalan que el conocimiento técnico sigue siendo esencial para
+                    Muchas empresas utilizan asistentes inteligentes para acelerar el
+                    desarrollo de aplicaciones y reducir costes. Sin embargo, expertos
+                    señalan que el conocimiento técnico sigue siendo esencial para
                     supervisar y validar el trabajo generado por estas herramientas.
                 </p>
+
             </article>
 
             <article>
+
                 <h2>Nuevos smartphones con baterías de carga ultrarrápida</h2>
 
                 <p>
@@ -248,14 +312,17 @@
                 </p>
 
                 <p>
-                    Diversos fabricantes tecnológicos han anunciado dispositivos móviles con sistemas de carga capaces
-                    de completar el 80% de la batería en menos de diez minutos.
+                    Diversos fabricantes tecnológicos han anunciado dispositivos
+                    móviles con sistemas de carga capaces de completar el 80% de la
+                    batería en menos de diez minutos.
                 </p>
 
                 <p>
-                    Esta tecnología podría cambiar la forma en que los usuarios utilizan sus teléfonos diariamente,
-                    reduciendo la dependencia de cargadores portátiles y aumentando la autonomía general.
+                    Esta tecnología podría cambiar la forma en que los usuarios
+                    utilizan sus teléfonos diariamente, reduciendo la dependencia de
+                    cargadores portátiles y aumentando la autonomía general.
                 </p>
+
             </article>
 
         </div>
@@ -274,14 +341,17 @@
             <h2>Publicidad</h2>
 
             <p>Aprende programación web desde cero.</p>
-            <p>Descubre nuestros cursos de desarrollo frontend y backend.</p>
+
+            <p>
+                Descubre nuestros cursos de desarrollo frontend y backend.
+            </p>
 
             <h2>Enlaces Externos</h2>
 
             <ul>
-                <li><a href="#">OpenAI</a></li>
-                <li><a href="#">Mozilla Developer Network</a></li>
-                <li><a href="#">W3Schools</a></li>
+                <li><a href="">OpenAI</a></li>
+                <li><a href="">Mozilla Developer Network</a></li>
+                <li><a href="">W3Schools</a></li>
             </ul>
 
         </aside>
@@ -293,13 +363,11 @@
 
             <p>contacto@technews.com</p>
 
-            <br>
+            <h4>Redes Sociales:</h4>
 
-            <h4>Redes Sociales</h4>
-
-            <a href="#">Instagram</a> |
-            <a href="#">Twitter</a> |
-            <a href="#">YouTube</a>
+            <a href="">Instagram</a> |
+            <a href="">Twitter</a> |
+            <a href="">YouTube</a>
 
         </footer>
 
