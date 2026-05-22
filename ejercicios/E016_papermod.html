@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .contenedor {
+            width: 960px;
+            margin: 0 auto;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background-color: rgb(245, 245, 245);
+        }
+
+        header {
+            width: 100%;
+            color: black;
+        }
+
+
+        .logo {
+            text-align: left;
+            font-size: 20px;
+            padding: 20px;
+            font-weight: 700;
+        }
+
+        .logo a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        nav {
+            color: white;
+            text-align: end;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+
+        nav li {
+            display: inline-block;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        .titulo{
+            margin-bottom: 20px;
+            margin-top: 50px;
+            font-size: 50px;
+        }
+        .iconos a {
+            color: black;
+            font-size: 20px;
+            
+        }
+
+        .expe{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        .expe li{
+            line-height: 1.7;
+            color: gray;
+        }
+
+        .expe a {
+            color: black;
+        }
+
+        .texto{
+            color: gray;
+        }
+
+
+        .texto a {
+            color: black;
+        }
+
+        .subtexto{
+        
+        }
+
+
+
+
+        footer {
+            color: rgb(95, 92, 92);
+            padding: 10px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: rgb(95, 92, 92);
+        }
+        
+
+        .blog{
+            padding-left: 20px;
+            padding-top: 2px;
+            background-color: white;
+            color: gray;
+            border-radius: 8px;
+            border-top: 8px;
+            border-right: 8px;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+
+
+        h3{
+            color: black;
+            font-size: 25px;
+            margin-top: 5px;
+        }
+
+
+        .enlace {
+            text-decoration: none;
+            padding: 15px;
+        }
+
+
+    </style>
+
+
+    <title>Paper Mod</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <a href="">PaperMod</a>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Archive</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Docs (Wiki)</a></li>
+                <li><a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <section class="intro">
+                <h1 class="titulo">PaperMod’s Demo</h1>
+                <p class="texto">
+                    A clean, fast, and responsive Hugo theme built for a polished reading experience. <a href="">Read
+                        more..</a>
+                </p>
+
+                <ul class="expe">
+                    <li>Lightweight by design, with a modern layout that keeps your content front and center.</li>
+                    <li>Explore the <a href="">Docs (Wiki)</a> to learn more about features and configuration.</li>
+                    <li>Support the project on <a href="">GitHub</a> and share it with others who love minimalistic
+                        designs.</li>
+                    <li>PaperMod is inspired by the <a href="">Paper</a> theme.</li>
+                </ul>
+
+                <p class="iconos">
+                    <a href=""><i class="fa-brands fa-github"></i></a> &nbsp;
+                    <a href=""><i class="fa-brands fa-discord"></i></a> &nbsp;
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a> &nbsp;
+                    <a href=""><i class="fa-solid fa-mug-saucer"></i></a> &nbsp;
+                </p>
+
+            </section>
+
+            <section>
+                <a href="" class="enlace">
+                    <article class="blog">
+                        <h3>
+                            PaperMod Installation Guide
+                        </h3>
+                        <p class="subtexto">
+
+                            Step by guide to install and update PaperMod in your Hugo site.
+                            <br>
+
+                            January 20,2021 . 3 min . Aditya Telange
+                        </p>
+                    </article>
+                </a>
+                <a href="" class="enlace">
+                    <article class="blog">
+                        <h3>
+                            Markdown Syntax Guide
+                        </h3>
+                        <p class="subtexto">
+                            This article offers a sample of basic Markdown syntax that can be used in Hugo content
+                            files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+                            ...
+
+                            <br>
+
+                            March 11, 2019 · 2 min · Hugo Authors
+
+                        </p>
+                    </article>
+                </a>
+                <a href="" class="enlace">
+                    <article class="blog">
+                        <h3>
+                            Code Syntax Guide
+                        </h3>
+                        <p class="subtexto">
+                            Sample article showcasing basic code syntax and formatting for HTML elements.
+
+                            <br>
+                            March 10, 2019 · 2 min · Aditya Telange
+
+                        </p>
+                    </article>
+                </a>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>
+                <a href="">© PaperMod Contributors</a> · Powered by <a href="">Hugo</a> & <a href="">PaperMod</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
