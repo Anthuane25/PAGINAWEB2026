@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Fuse Core</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .fondo {
+            height: 100vh;
+            width: 100vw;
+
+        }
+
+        .pantalla {
+            background-image: url("../imagenes/fondo.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            overflow: hidden;
+
+            text-align: center;
+        }
+
+
+        .imagen {
+            width: 18vh;
+            height: 18vh;
+            border: 4px solid white;
+            border-radius: 9vh;
+        
+
+        }
+
+        .contenido {
+            box-sizing: border-box;
+            padding-top: 5.5vh; 
+            height: 55vh;
+            background-color: rgba(24, 23, 23, 0.616);
+            color: white;
+
+        }
+
+        .fuse {
+            font-size: 2.6rem;
+            padding: 0.9rem 0;
+        }
+
+
+        .subtitulo {
+            font-size: 1.2rem;
+            color: rgb(255, 255, 255);
+            padding: 0.1rem 0;
+    
+        }
+
+        li {
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 40px;
+            margin-right: 44px;
+            margin-top: 1.8rem;
+            font-size: 1.8rem;
+        }
+
+        li a {
+            color: white;
+        
+        }
+
+        .final{
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1.7rem;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="fondo pantalla">
+
+        <div class="contenido">
+
+            <img class="imagen" src="..//imagenes/fuse.png" alt="">
+            <h1 class="fuse">Fuse Core</h1>
+            <p class="subtitulo">Frontend Developer</p>
+
+            <ul>
+                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-weibo"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-gitlab"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-book-open"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-key"></i></a></li>
+            </ul>
+            <p class="final">
+                Any (multiline) text containing simple HTML, such as links or ... lorem ipsum.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
