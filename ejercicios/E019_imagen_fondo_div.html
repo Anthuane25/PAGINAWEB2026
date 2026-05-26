@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMAGEN DE FONDO DE UN DIV</title>    
+    <title>IMAGEN DE FONDO DE UN DIV</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .dimensiones{
+
+        .dimensiones {
             height: 100vh;
             width: 100vw;
         }
 
-        .imagen{
+        .imagen {
             background-image: url("https://picsum.photos/1920/1000");
             background-position: center;
             background-repeat: no-repeat;
@@ -24,7 +26,7 @@
 
         }
 
-        h1{
+        h1 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 5rem;
             color: white;
@@ -33,6 +35,17 @@
             background-color: rgb(92, 92, 89);
         }
 
+        .hero{
+            height: 100vh;
+            width: 100wh;
+        }
+
+        .hero video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
 
     </style>
@@ -40,13 +53,31 @@
 
 
 </head>
+
 <body>
-    <div class="dimensiones imagen"><h1>Soy el número 1</h1></div>
-    <div class="dimensiones imagen"><h1>Soy el número 2</h1></div>
-    <div class="dimensiones imagen"><h1>Soy el número 3</h1></div>
-  
+    <div class="dimensiones imagen">
+        <h1>Soy el número 1</h1>
+    </div>
+    <div class="dimensiones imagen">
+        <h1>Soy el número 2</h1>
+    </div>
+    <div class="dimensiones imagen">
+        <h1>Soy el número 3</h1>
+    </div>
+
+    <!-- Video de fondo -->
+
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="https://www.w3schools.com/howto/rain.mp4">
+        </video>
 
 
-    
+    </div>
+
+
+
+
 </body>
+
 </html>
