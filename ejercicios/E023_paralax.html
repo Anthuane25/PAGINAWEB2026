@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        section {
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+
+
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+
+
+            background-attachment: fixed;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+          h1 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        header{
+            background-color: aliceblue;
+            font-size: 5rem;
+            text-align: center;
+            color: rgba(18, 102, 176, 0.467);
+        }
+
+        nav{
+            text-align: right;
+            background-color: rgba(0, 0, 0, 0.247);
+            position: sticky;
+            top: 10px;
+
+            z-index: 1001;
+        }
+        nav a{
+            padding-left: 2rem;
+            color: white;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+
+        /*CLASES*/
+        .primero {
+            background-image: url(https://picsum.photos/id/21/3008/2008.jpg);
+        }
+
+        .segundo {
+            background-image: url(https://picsum.photos/id/16/2500/1667.jpg);
+        }
+
+
+        .contenido {
+            width: 40vw;  /*experimento*/
+            background-color: rgba(71, 70, 70, 0.596);
+            text-align: center;
+            padding: 2rem;
+
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            /*Bordes*/
+            border-radius: 20px;
+            box-shadow:
+            0 0 10px rgb(128, 124, 124), /*este es color que esta mas cerca del cuadro*/
+            0 0 30px rgb(102, 100, 102); /*este es el color que esta mas lejos del elemento */
+
+
+        }
+
+        .arriba{
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.293);
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 3px 6px;
+
+            z-index: 1000;
+
+        }
+        .arriba a{
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        Juncal Flamenco: Ole y Ole 
+    </header>
+    <nav>
+        <a href="">Inicio</a>
+        <a href="">Cante</a>
+        <a href="">Baile</a>
+        <a href="">Precios</a>
+    </nav>
+
+
+    <div class="arriba">
+        <a href="#">volver</a>
+    </div>
+
+    <section class="primero">
+        <div class="contenido">
+            <h1>Soy el primero</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias quaerat cupiditate culpa soluta nisi sed
+                autem voluptatibus esse est et repellat provident quas deserunt, laudantium vitae enim consequatur rerum
+                doloremque.
+            </p>
+        </div>
+    </section>
+
+    <section class="segundo">
+        <div class="contenido">
+            <h1>Soy el segundo</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quae assumenda dignissimos molestiae ea
+                eum velit exercitationem sequi perspiciatis error sed laboriosam eligendi in repellendus odio vel
+                eveniet, obcaecati tempore.
+            </p>
+        </div>
+    </section>
+
+    <section class="primero">
+        <div class="contenido">
+            <h1>Soy el tercero</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias illo, suscipit nostrum, officiis
+                adipisci recusandae repudiandae qui magni fugit, dolorum iusto assumenda neque cum nihil quo quisquam id
+                aliquid ab.
+            </p>
+        </div>
+    </section>
+
+    <section class="segundo">
+        <div class="contenido">
+            <h1>Soy el cuarto</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam consequatur quaerat provident architecto,
+                quidem laboriosam ab labore. Exercitationem cupiditate maiores corrupti maxime, commodi doloribus ullam
+                ut harum molestias iste et!
+            </p>
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>
