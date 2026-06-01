@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+
+        .lobster-regular {
+            text-align: center;
+            font-family: "Lobster", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 6rem;
+            color: rgba(255, 255, 255, 0.831);
+
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .portada {
+
+            background-image: url("../imagenes/muchacha.jpg");
+        }
+
+        .fondo {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.452);
+        }
+
+        .negrita {
+            font-weight: bold;
+        }
+
+        .fijo {
+            position: fixed;
+            top: 1.3rem;
+            left: 1.1rem;
+            z-index: 1000;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .flecha {
+            position: absolute;
+            bottom: 2rem;
+            left: 49%;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.436);
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            /* border:1px solid rgb(254, 254, 255); */
+            border-radius: 2rem;
+        }
+
+        .flecha a {
+            color: white;
+        }
+
+        .flecha:hover {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .flecha:hover i {
+            color: rgba(255, 255, 255, 0.483);
+        }
+
+        .recuadro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 55vw;
+            min-height: 42vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 0.3rem;
+            border: 1px solid rgba(63, 54, 54, 0.048);
+            color: white;
+            text-align: center;
+
+            box-sizing: border-box;
+            padding: 2.3rem;
+
+
+        }
+
+        .pagina {
+
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+
+            overflow: hidden;
+        }
+
+        .img_pag2 {
+            background-image: url(../imagenes/capucha.jpg);
+        }
+
+        .img_pag3 {
+            background-image: url(../imagenes/mochilaa.jpg);
+        }
+
+        .img_pag4 {
+            background-image: url(../imagenes/camisa.jpg);
+        }
+
+        .img_pag5 {
+            background-image: url(../imagenes/arbol.jpg);
+        }
+
+
+        .titulo-recuadro {
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
+
+        .fecha {
+            font-size: 1.4rem;
+            font-weight: lighter;
+            color: rgb(178, 178, 178);
+        }
+
+        .texto {
+            font-size: 1.3rem;
+            color: rgb(178, 178, 178);
+            line-height: 1.3;
+            margin-top: 2rem;
+            margin-bottom: 2.4rem;
+            font-weight: lighter;
+        }
+
+        .boton {
+            margin: 0 auto;
+            width: fit-content;
+            border: 2px solid rgb(222, 222, 222);
+            padding: 0.6rem 0.8rem;
+            border-radius: 0.3rem;
+        }
+
+        .boton a {
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    </style>
+
+    <title>Roadtrip</title>
+
+
+
+</head>
+
+<body>
+    <header class="fijo">
+        <p>
+            <span class="negrita">Road Trip</span> by TEMPLATED
+        </p>
+    </header>
+
+    <section class="pagina portada">
+
+
+        <div class="fondo">
+            <h1 class="lobster-regular">
+                This is a road trip
+            </h1>
+            <p class="flecha">
+                <a href="#pag2"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+    </section>
+
+    <section id="pag2" class="pagina img_pag2">
+        <div class="fondo">
+            <div class="recuadro">
+                <h2 class="titulo-recuadro">Nibh non lobortis mus nibh</h2>
+                <p class="fecha">01.01.2017</p>
+                <p class="texto">
+                    Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                    platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a
+                    duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                    blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                    tincidunt tristique enim arcu litora scelerisque eros suspendisse.
+                </p>
+                <p class="boton">
+                    <a href="">LEARN MORE</a>
+                </p>
+            </div>
+
+            <p class="flecha">
+                <a href="#pag3"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+    </section>
+
+
+    <section id="pag3" class="pagina img_pag3">
+        <div class="fondo">
+            <div class="recuadro">
+                <h2 class="titulo-recuadro">Mus elit a ultricies at</h2>
+                <p class="fecha">12.21.2016</p>
+                <p class="texto">
+                    Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                    platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a
+                    duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                    blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                    tincidunt tristique enim arcu litora scelerisque eros suspendisse.
+                </p>
+                <p class="boton">
+                    <a href="">LEARN MORE</a>
+                </p>
+            </div>
+
+            <p class="flecha">
+                <a href="#pag4"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+
+    </section>
+
+
+    <section id="pag4" class="pagina img_pag4">
+        <div class="fondo">
+            <div class="recuadro">
+                <h2 class="titulo-recuadro">Varius a cursus aliquet</h2>
+                <p class="fecha">11.11.2016</p>
+                <p class="texto">
+                    Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                    platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a
+                    duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                    blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                    tincidunt tristique enim arcu litora scelerisque eros suspendisse.
+                </p>
+                <p class="boton">
+                    <a href="">LEARN MORE</a>
+                </p>
+            </div>
+
+            <p class="flecha">
+                <a href="#pag5"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+
+    </section>
+
+    <section id="pag5" class="pagina img_pag5">
+        <div class="fondo">
+            <div class="recuadro">
+                <h2 class="titulo-recuadro">Luctus blandit mi lectus in nascetur</h2>
+                <p class="fecha">10.30.2016</p>
+                <p class="texto">
+                    Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                    platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a
+                    duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                    blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                    tincidunt tristique enim arcu litora scelerisque eros suspendisse.
+                </p>
+                <p class="boton">
+                    <a href="">LEARN MORE</a>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>
