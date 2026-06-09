@@ -22,31 +22,39 @@
 
         .areas{
             display: grid;
+            grid-template-columns: minmax(0.1fr) 7fr 1fr;
             grid-template-areas: 
             "cabecera  cabecera  cabecera"
-            "lateral   cuerpo     cuerpo"
+            "lateral   cuerpo     derecha"
             "pie        pie        pie ";
         }
 
         .inicio{
             grid-area: cabecera;
-            height: 100px;
+            height: 80px;
             background-color: rgba(151, 228, 228, 0.623);
+            grid-column-start: 3;
+            grid-column-end: 2;
         }
         .col1{
             grid-area: lateral;
-            height: 500px;
+            height: 300px;
             background-color: rgba(150, 228, 202, 0.507);
         }
         .col2{
             grid-area: cuerpo;
-            height: 500px;
+            height: 300px;
             background-color: azure;
+        }
+
+        .col3{
+            grid-area: derecha;
+            background-color: rgba(247, 247, 211, 0.753);
         }
         .final{
             grid-area: pie;
             height: 100px;
-            background-color: rgba(245, 245, 220, 0.692);
+            background-color: rgba(245, 245, 220, 0.459);
         }
 
 
@@ -63,6 +71,7 @@
         <div class="inicio">Cabecera</div>
         <div class="col1">Lateral</div>
         <div class="col2">Cuerpo</div>
+        <div class="col3">Derecha</div>
         <div class="final">Pie</div>
     </div>
 
