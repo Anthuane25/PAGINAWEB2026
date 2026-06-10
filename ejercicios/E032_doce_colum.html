@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRANDES VIAJES</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-image: url("https://picsum.photos/1200/600");
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.459);
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav li {
+            display: inline-block;
+            padding: 1rem 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-transform: uppercase;
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-size: 6rem;
+            text-shadow: #2b2a2a 3px 5px 2px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            text-shadow: #2b2a2a 3px 2px 2px;
+        }
+        .gris{
+            color: #9f9e9e;
+        }
+
+
+        footer {
+            background-color: #2b2a2a;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding-right: 1rem;
+        }
+
+        footer p {
+            line-height: 2.5rem;
+        }
+
+        main {
+            margin: 50px 0;
+            display: grid;
+            grid-template-columns:
+                minmax(20px, 1fr) 
+                minmax(0, 1200px) 
+                minmax(20px, 1fr);
+
+
+            grid-template-areas:
+                ". contenido .";
+        }
+
+        .contenido {
+            grid-area: contenido;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        article {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.472);
+            padding: 6px;
+            line-height: 1.4;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding: 1rem;
+        }
+
+        article img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+        article p{
+            padding: 1rem;
+        }
+        .col-12 {
+            grid-column: span 12;
+        }
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-3 {
+            grid-column: span 3;
+        }
+
+        @media (max-width: 900px){
+            .col-3,
+            .col-4,
+            .col-6,
+            .col-8{
+                grid-column: span 12;
+            }
+            .hero h1{
+                font-size: 3rem;
+            }
+            
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Destino</a></li>
+                <li><a href="">Aventura</a></li>
+                <li><a href="">Cultura</a></li>
+                <li><a href="">Fotografia</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Grandes Viajes</h1>
+            <p>Explora el mundo sin límites</p>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="contenido">
+            <article class="col-12">
+                <img src="https://picsum.photos/id/237/536/354.jpg?" alt="">
+            </article>
+            <article class="col-8">
+                <img src="https://picsum.photos/1200/600?jungle" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-4">
+                <img src="https://picsum.photos/600/600?people" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-6">
+                <img src="https://picsum.photos/800/400?desert" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-6">
+                <img src="https://picsum.photos/800/400?beach" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-3">
+                <img src="https://picsum.photos/800/400?river" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-3">
+                <img src="https://picsum.photos/800/400?city" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-3">
+                <img src="https://picsum.photos/800/400?island" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+
+            <article class="col-3">
+                <img src="https://picsum.photos/800/400?flower" alt="">
+                <h4>La ruta definitiva por los Andes</h4>
+                <p>Descubre algunos de los paises más impresionantes del mundo.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="">Quienes somos</a>
+            <a href="">Publicidad</a>
+            <a href="">Suscripciones</a>
+            <a href="">Politica de privacidad</a>
+            <a href="">Cookies</a>
+            <a href="">Contacto</a>
+        </p>
+        <p class="gris">
+            &copy; 2026 Grandes Viajes todos los derecho reservados
+        </p>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
