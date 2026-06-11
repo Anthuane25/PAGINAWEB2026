@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID Y MEDIA QUERIE</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aliceblue;
+            padding: 20px;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+
+            grid-template-areas:
+                "header   header"
+                "menu     content"
+                "ads      content"
+                "footer   footer";
+
+            gap:20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header{
+            grid-area: header;
+            background-color: beige;
+        }
+        .menu{
+            grid-area: menu;
+            background-color: rgba(181, 245, 223, 0.753);
+        }
+        .content{
+            grid-area: content;
+            background-color: rgb(196, 230, 230);
+        }
+        .ads{
+            grid-area: ads;
+            background-color: bisque;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: rgb(187, 159, 212);
+        }
+
+        .box{
+            color: white;
+            padding: 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /*MOVIL*/
+
+        @media (max-width:900px){
+            .contenedor{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "menu"
+                "header"
+                "content"
+                "ads"
+                "footer";
+            }
+        }
+
+        /*TABLET*/
+        @media (max-width:1200px){
+            .contenedor{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "header "
+                "menu content"
+                "ads footer";
+            }
+        }
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header box">HEADER</header>
+        <nav class="menu box">MENÚ</nav>
+        <main class="content box">CONTENIDO</main>
+        <aside class="ads box">PUBLICIDAD</aside>
+        <footer class="footer box">PIE</footer>
+
+    </div>
+
+
+
+</body>
+
+</html>
