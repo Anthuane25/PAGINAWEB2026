@@ -1,92 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introducción a javascript</title>
-    <script>
-        // Esto es un comentario de una linea
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción a javascript</title>
+  <script>
+    // Esto es un comentario de una linea
 
-        /*
-        esto 
-        es 
-        un comentario
-        de varias lineas
-        */    
-/*
-       const COLOR = "azul";
+    /*
+    esto 
+    es 
+    un comentario
+    de varias lineas
+    */
+    /*
+           const COLOR = "azul";
+    
+           let nombre = "Daniela 'juncal flamenco' ";
+           let edad = 21;
+           let temperatura = 12;
+           let numero = 873;
+           
+           console.log(temperatura);
+           temperatura = 200;
+           temperatura = -1;
+           console.log(temperatura);
+    
+           // define 
+           let curso;
+    
+           // inicializa
+           curso = "Desarrollo web";
+    
+           // utiliza
+           console.log(curso);
+    
+    */
+    let estudiante = "Paco García";
+    let asignatura = "Matemáticas";
+    let nota = 6.25;
 
-       let nombre = "Daniela 'juncal flamenco' ";
-       let edad = 21;
-       let temperatura = 12;
-       let numero = 873;
-       
-       console.log(temperatura);
-       temperatura = 200;
-       temperatura = -1;
-       console.log(temperatura);
-
-       // define 
-       let curso;
-
-       // inicializa
-       curso = "Desarrollo web";
-
-       // utiliza
-       console.log(curso);
-
-*/
-        let estudiante = "Paco García";
-        let asignatura = "Matemáticas";
-        let nota = 6.25;
-
-        // Lado del cuadrado
-        let lado = 22.43;
-        let cuadrado = lado * lado;
+    // Lado del cuadrado
+    let lado = 22.43;
+    let cuadrado = lado * lado;
 
 
-        // Precio con IVA
-        const IVA = 0.21;
-        let precio = 100;
-        //let total = precio + precio * IVA;
-        let total = precio * (1 + IVA);
+    // Precio con IVA
+    const IVA = 0.21;
+    let precio = 100;
+    //let total = precio + precio * IVA;
+    let total = precio * (1 + IVA);
 
-        // ----------------------
-        let anio = 2026;
+    // ----------------------
+    let anio = 2026;
 
-        </script>
+  </script>
 </head>
 
 <body>
-    <button onclick="
+  <button onclick="
                     console.log('Estudiante: ' + estudiante);
                     console.log('Materia: ' + asignatura);
                     console.log('Calificación: ' + nota);">
-        Datos del estudiante
-    </button>
+    Datos del estudiante
+  </button>
 
-    <button onclick="console.log('Area: ' + cuadrado);">
-        Área del Cuadrado 
-    </button>
-    <button onclick="console.log(total)">
-        IVA
-    </button>
+  <button onclick="console.log('Area: ' + cuadrado);">
+    Área del Cuadrado
+  </button>
+  <button onclick="console.log(total)">
+    IVA
+  </button>
 
-    <button onclick="
+  <button onclick="
                     let edad = prompt('Dime tu edad',33);
                     alert('Tu edad es ' + edad);
                     ">
     Pregunta
-    </button>
+  </button>
 
-    <button onclick="
+  <button onclick="
                     let acuerdo = confirm('¿Está de acuerdo?');
                     alert(acuerdo);">
-        Confirm
-    </button> 
-    <br><br>
+    Confirm
+  </button>
+  <br><br>
 
-Comparación:
+  Comparación:
   <ul>
     <li>Mayor que A > B </li>
     <li>Menor que A < B</li>
@@ -103,10 +104,10 @@ Comparación:
                     let ahora = prompt('Dime el año actual',2026);
                     if(anio == ahora) alert('El año es correcto');
                     ">
-    IF 
+    IF
   </button>
- 
-    <button onclick="
+
+  <button onclick="
                     ahora = prompt('Dime el año actual',2026);
                     if(anio == ahora) {
                         alert('El año es correcto');
@@ -130,8 +131,8 @@ Comparación:
                     }">
     Bucles FOR decreciente
   </button>
- 
-    <button onclick="
+
+  <button onclick="
                     for(let i = 0; i < 100; i += 2){
                         console.log('i: ' + i);
                     }">
@@ -174,13 +175,12 @@ Comparación:
                    ">
     Bucles while 0-100 pares
   </button>
-  
+
   <hr>
 
   <h2>Ejercicios</h2>
   <h4>1. Pedir un número al usuario y decir si es positivo o negativo</h4>
-  <p>
-    <button onclick="
+  <button onclick="
                     let numero = prompt('Dime un número');
                     if(numero > 0){
                          alert('El número ' + numero + ' es positivo');
@@ -190,13 +190,73 @@ Comparación:
                     }
                     ">
     Positivo o negativo
-    </button>
-
-  </p>
+  </button>
 
 
+  <h4>2. Dada la nota de un examen, calcular la calificación</h4>
 
-  
-    
+
+  <button onclick="
+                let nota_examen = prompt('Dime la nota');
+                if(nota_examen < 5){
+                    alert('SUSPENSO');
+                }
+                else{
+                    if(nota_examen < 7){
+                        alert('APROBADO');
+                    }
+                    else{
+                        if(nota_examen < 9){
+                            alert('NOTABLE');
+                        }
+                        else{
+                            alert('SOBRESALIENTE');
+                        }
+                    }
+                }
+ ">
+    Calificación
+  </button>
+
+  <h4>3. Adivina el número: Dado un número, intentar adivinarlo en 5 intentos.</h4>
+  <button onclick="
+                const OBJETIVO = Math.floor(Math.random() * 100) + 1;
+                //console.log(OBJETIVO);
+
+                const LIMITE = 5;
+
+                let acierto = false;
+                let intentos = 1;
+                
+                let numero_candidato = prompt('¿Cual es el numerito?');
+
+                while(!acierto && intentos <= LIMITE){
+                    
+                    if(numero_candidato == OBJETIVO){
+                        acierto = true;
+                        alert('¡¡¡ENHORABUENA!!! has acertado');
+                    }
+                    else{
+                        if(intentos < LIMITE){
+                            numero_candidato = prompt('Fallo. Te quedan ' +  (LIMITE-intentos) + ' intentos');
+                        }
+                    }
+                    intentos ++;
+                }
+
+                if(!acierto){
+                    alert('Fin de la partida. El número era ' +  OBJETIVO);
+                }
+
+   ">
+
+    Adivina el número
+  </button>
+
+
+
+
+
 </body>
+
 </html>
