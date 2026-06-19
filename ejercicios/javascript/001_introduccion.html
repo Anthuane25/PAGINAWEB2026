@@ -121,7 +121,8 @@
   <button onclick="
                     for(let i = 0; i < 10; i++){
                         console.log('i: ' + i);
-                    }">
+                    }
+                    console.log('FIN')">
     Bucles FOR
   </button>
 
@@ -161,7 +162,7 @@
                     
                    }    
                    ">
-    Bucles while
+    Bucles WHILE
   </button>
 
 
@@ -171,9 +172,9 @@
                     console.log('contador: ' + contador);
                     contador +=2;
                     
-                   }    
+                   }
                    ">
-    Bucles while 0-100 pares
+    Bucles WHILE 0-100 pares
   </button>
 
   <hr>
@@ -181,12 +182,17 @@
   <h2>Ejercicios</h2>
   <h4>1. Pedir un número al usuario y decir si es positivo o negativo</h4>
   <button onclick="
-                    let numero = prompt('Dime un número');
+                    let numero = prompt('Dime un número', 0);
                     if(numero > 0){
                          alert('El número ' + numero + ' es positivo');
                     }
                     else{
+                        if(numero==0){
+                            alert('El número ' + numero + ' es CERO');
+                    }
+                        else{
                         alert('El número ' + numero + ' es negativo');
+                        }
                     }
                     ">
     Positivo o negativo
@@ -251,6 +257,30 @@
    ">
 
     Adivina el número
+  </button>
+
+  <h4>4. Calcular la suma de números enteros entre 1 y 100</h4>
+  <button onclick="
+                 let suma = 0;
+                 for(let i = 1; i <= 100; i++){
+                  //suma = suma + i;
+                  suma += i;
+                 }
+               alert('La suma es ' + suma);
+
+
+               //con bucle while
+
+               suma = 0;
+               let ct = 1;
+               while(ct <= 100){
+                suma += ct;
+                ct ++;
+               }
+               alert('La suma es con WHILE es ' + suma);
+  ">
+  suma
+
   </button>
 
 
