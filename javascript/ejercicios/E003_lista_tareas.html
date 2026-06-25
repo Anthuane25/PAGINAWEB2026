@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            padding-top: 20vh;
+            background-color: azure;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        ul{
+            margin-top: 1rem;
+        }
+        
+
+        li {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1rem 1fr auto;
+            gap: 10px;
+
+            list-style: none;
+            color: blue;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+        }
+        li button{
+            padding: 3px;
+            height: fit-content;
+        }
+        li.tachado span{
+            text-decoration: line-through;
+            color: rgba(128, 128, 128, 0.767);
+
+        }
+
+        .app {
+            min-height: 40vh;
+            min-width: 40vw;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgba(161, 248, 204, 0.397);
+        }
+
+
+        .editor {
+            display: flex;
+            padding: 15px;
+            gap: 10px;
+            border-bottom: 1px solid rgba(94, 89, 89, 0.651);
+        }
+
+        .editor input {
+            color: rgb(48, 39, 39);
+            flex-grow: 3;
+            font-size: 20px;
+        }
+
+        .editor button {
+            flex-grow: 1;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="app">
+        <h1>Mi lista de tareas</h1>
+        <div class="editor">
+            <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
+            <button onclick="crear_tarea()">Crear</button>
+        </div>
+
+        <ul id="tareas"></ul>
+    </div>
+
+    <script>
+        function crear_tarea() {
+            const input = document.getElementById("nueva_tarea");
+            const texto = input.value;
+
+            const li = document.createElement('li');
+            const check = document.createElement('input');
+            check.type = "checkbox";
+            check.onclick = function () { alternar(this); }
+
+            const span = document.createElement('span');
+            span.innerHTML = texto;
+            span.onclick = function () { editar_tarea(this); }
+
+            const boton = document.createElement('button');
+            boton.innerHTML = "Borrar";
+            boton.onclick = function () { borrar_tarea(this); }
+
+            li.appendChild(check);
+            li.appendChild(span);
+            li.appendChild(boton);
+
+            const lista = document.getElementById("tareas");
+            lista.appendChild(li);
+
+            input.value = "";
+
+        }
+        function borrar_tarea(boton) {
+            const li = boton.parentNode;
+            li.parentNode.removeChild(li);
+
+        }
+        function alternar(casilla) {
+            const li = casilla.parentNode;
+            if (casilla.checked) {
+                li.className = "tachado";
+            }
+            else {
+                li.className = "";
+            }
+        }
+
+        function editar_tarea(span) {
+            const texto_actual = span.innerHTML;
+            const input = document.createElement('input');
+            input.type = "text";
+            input.value = texto_actual;
+
+            input.onblur = function () {
+                if (input.value === '') {
+                    span.innerHTML = texto_actual;
+                }
+                else {
+                    span.innerHTML = input.value;
+                }
+                input.parentNode.replaceChild(span, input);
+
+            };
+            span.parentNode.replaceChild(input, span);
+            input.focus();
+
+        }
+    </script>
+</body>
+
+</html>
